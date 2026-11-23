@@ -1,0 +1,279 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --border-color: #334155;
+    --bg-input: #090d16;
+    --accent-color: #6366f1;
+    --success-color: #10b981;
+    --secondary-color: #3b82f6;
+    --danger-color: #ef4444;
+}
+
+body.modo-claro {
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-color: #0f172a;
+    --border-color: #cbd5e1;
+    --bg-input: #f8fafc;
+    --accent-color: #4f46e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.header-principal h1 {
+    margin: 0;
+}
+
+.mensaje-estado {
+    margin: 0 0 14px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.barra-progreso {
+    background-color: var(--border-color);
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progreso-indicador {
+    background-color: var(--accent-color);
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.etapa-uno,
+.paso-1 {
+    width: 33%;
+}
+
+.etapa-dos {
+    width: 66%;
+}
+
+.etapa-tres {
+    width: 100%;
+}
+
+.panel-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.conversor-moneda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+.campo-texto {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    background-color: var(--bg-input);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.campo-texto-corto {
+    padding: 9px 12px;
+    background-color: var(--bg-input);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+select {
+    padding: 8px 10px;
+    background-color: var(--bg-input);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.grid-planes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarjeta-plan {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tarjeta-plan h3,
+.tarjeta-plan p {
+    margin: 0;
+}
+
+.tarjeta-seleccionada {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 1px var(--accent-color);
+}
+
+.precio-plan {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.lista-extras {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcion-adicional {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.grupo-formulario {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item-carrito {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.item-carrito p,
+.item-carrito ul {
+    margin: 6px 0;
+}
+
+.grupo-cupon {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.desglose-precio {
+    margin-top: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.grupo-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.contenedor-historial {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.item-historial {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lista-feed {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-secundario {
+    background-color: var(--secondary-color);
+}
+
+.btn-exito {
+    background-color: var(--success-color);
+}
+
+.btn-peligro {
+    background-color: var(--danger-color);
+}
+
+.oculto {
+    display: none;
+}

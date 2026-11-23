@@ -1,0 +1,42 @@
+{
+    "planes": [
+        {
+            "id": 1,
+            "nombre": "Plan Inicial",
+            "precioBase": 25000,
+            "descripcion": "Ideal para empezar con un proyecto o servicio esencial.",
+            "caracteristica": "Soporte estándar y panel básico"
+        },
+        {
+            "id": 2,
+            "nombre": "Plan Crecimiento",
+            "precioBase": 45000,
+            "descripcion": "Pensado para escalar operaciones con mejores recursos.",
+            "caracteristica": "Soporte prioritario y reportes semanales"
+        },
+        {
+            "id": 3,
+            "nombre": "Plan Profesional",
+            "precioBase": 75000,
+            "descripcion": "Mayor capacidad y acompañamiento continuo para equipos activos.",
+            "caracteristica": "Soporte dedicado y respaldos diarios"
+        }
+    ],
+    "adicionales": [
+        {
+            "id": 101,
+            "nombre": "Capacitación personalizada",
+            "precioMensual": 8000
+        },
+        {
+            "id": 102,
+            "nombre": "Auditoría mensual",
+            "precioMensual": 12000
+        },
+        {
+            "id": 103,
+            "nombre": "Atención 24/7",
+            "precioMensual": 15000
+        }
+    ]
+}

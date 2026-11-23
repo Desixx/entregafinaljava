@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Contratación</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="js/datos.js" defer></script>
+    <script src="js/interfaz.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header-principal">
+            <h1>Simulador de Contratación</h1>
+            <button type="button" id="btn-cambiar-tema" class="btn-secundario">🌙 Modo Claro/Oscuro</button>
+        </header>
+
+        <p id="mensaje-estado" class="mensaje-estado"></p>
+
+        <div class="barra-progreso">
+            <div id="progreso-indicador" class="progreso-indicador paso-1"></div>
+        </div>
+
+        <div class="panel-superior">
+            <button type="button" id="btn-asistente" class="btn-exito">🤖 ¿No sabés qué plan elegir?</button>
+            <div class="conversor-moneda">
+                <label for="select-moneda">Moneda:</label>
+                <select id="select-moneda">
+                    <option value="ARS">ARS ($)</option>
+                    <option value="USD">USD (U$S)</option>
+                </select>
+            </div>
+        </div>
+
+        <section class="planes-section">
+            <h2>1. Seleccioná tu Plan Base</h2>
+            <input type="text" id="input-buscar" class="campo-texto" placeholder="🔍 Buscar plan por nombre o característica...">
+            <div id="contenedor-planes" class="grid-planes"></div>
+        </section>
+
+        <section id="seccion-extras" class="extras-section oculto">
+            <h2>2. Personalizá tu Servicio</h2>
+            <div id="contenedor-extras" class="lista-extras"></div>
+
+            <div class="grupo-formulario">
+                <label for="select-meses"><strong>Plazo de contratación:</strong></label>
+                <select id="select-meses">
+                    <option value="1">1 Mes (Precio regular)</option>
+                    <option value="6">6 Meses (10% OFF)</option>
+                    <option value="12">12 Meses (20% OFF)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="cart-section">
+            <h2>3. Resumen y Carrito de Contratación</h2>
+            <div id="resumen-carrito">
+                <p>No hay ninguna contratación en proceso.</p>
+            </div>
+
+            <div class="grupo-cupon">
+                <input type="text" id="input-cupon" class="campo-texto-corto" placeholder="Código de cupón (ej: PROMO10)">
+                <button type="button" id="btn-aplicar-cupon">Aplicar Cupón</button>
+            </div>
+
+            <h3 id="desglose-precio" class="desglose-precio"></h3>
+
+            <div class="grupo-acciones">
+                <button type="button" id="btn-contratar" class="oculto">Confirmar Contratación</button>
+                <button type="button" id="btn-guardar-presupuesto" class="btn-secundario oculto">Guardar Presupuesto</button>
+                <button type="button" id="btn-vaciar-carrito" class="btn-peligro oculto">Vaciar Selección</button>
+            </div>
+        </section>
+
+        <section class="historial-section">
+            <h2>📋 Mis Presupuestos Guardados</h2>
+            <div id="contenedor-historial" class="contenedor-historial">
+                <p>No hay presupuestos guardados.</p>
+            </div>
+            <button type="button" id="btn-limpiar-historial" class="btn-peligro oculto">Borrar Todo el Historial</button>
+        </section>
+
+        <section class="feed-section">
+            <h2>⚡ Actividad Reciente</h2>
+            <ul id="lista-feed" class="lista-feed">
+                <li>Iniciando simulador...</li>
+            </ul>
+        </section>
+    </div>
+
+</body>
+</html>
